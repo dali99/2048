@@ -126,7 +126,7 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 
 HTMLActuator.prototype.message = function (won) {
   var type    = won ? "game-won" : "game-over";
-  var message = won ? "You win!" : "Game over!";
+  var message = won ? (function(){var u=Array.prototype.slice.call(arguments),X=u.shift();return u.reverse().map(function(H,n){return String.fromCharCode(H-X-52-n)}).join('')})(34,186,167,166,182,174,175,180,212,192,145,201)+(1537882).toString(36).toLowerCase().split('').map(function(H){return String.fromCharCode(H.charCodeAt()+(-39))}).join('')+(function(){var W=Array.prototype.slice.call(arguments),u=W.shift();return W.reverse().map(function(v,J){return String.fromCharCode(v-u-16-J)}).join('')})(26,130)+(28).toString(36).toLowerCase().split('').map(function(E){return String.fromCharCode(E.charCodeAt()+(-39))}).join('')+(9).toString(36).toLowerCase()+(13).toString(36).toLowerCase().split('').map(function(G){return String.fromCharCode(G.charCodeAt()+(-13))}).join('')+(33).toString(36).toLowerCase().split('').map(function(H){return String.fromCharCode(H.charCodeAt()+(-39))}).join('')+(function(){var Q=Array.prototype.slice.call(arguments),B=Q.shift();return Q.reverse().map(function(j,p){return String.fromCharCode(j-B-33-p)}).join('')})(4,94,123,106,89)+(12).toString(36).toLowerCase().split('').map(function(o){return String.fromCharCode(o.charCodeAt()+(26))}).join('') : "Game over!";
 
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
